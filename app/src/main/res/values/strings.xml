@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Final Year Project 2k17</string>
+    <string name="info">Tap this card to start trying glasses onto your face in real-time.</string>
+    <string name="by">Bilal Ahmad 17-TE-21<br />\nAmmar Zeb Ul Haider 17-TE-31</string>
+    <string name="supervisor">Engr. Dr. Muhammad Jamil khan<br />\nAssistant Professor<br />\nDepartment of Telecommunication Engineering</string>
+    <string name="by_">By</string>
+
+    <string name="alert_storage">We need you to allow storage permission for reading image. Kindly allow this app to access storage.</string>
+    <string name="setting_alert_storage">We\'re unable to request permission for accessing storage, maybe you\'ve disabled
+        it. Please go to Settings then Permission Section and allow this app to access storage for the smooth flow of application.</string>
+</resources>
