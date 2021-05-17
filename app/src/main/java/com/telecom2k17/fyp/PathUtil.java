@@ -159,6 +159,15 @@ public class PathUtil {
         return false;
     }
 
+    public String arrayToList() {
+        StringBuilder ret = new StringBuilder();
+        for (int i = 1; i <= okFileExtensions.length; i++) {
+            ret.append("<br />   <b>").append(i).append("</b>.  ").append(okFileExtensions[i - 1]);
+        }
+
+        return ret.toString();
+    }
+
     public boolean isExternalStorageDocument(Uri uri) {
         return "com.android.externalstorage.documents".equals(uri
                 .getAuthority());

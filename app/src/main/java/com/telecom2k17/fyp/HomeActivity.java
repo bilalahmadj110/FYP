@@ -7,6 +7,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.text.Html;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
@@ -151,9 +152,9 @@ public class HomeActivity extends AppCompatActivity {
                         showOkAlert(path);
 
                     } else
-                        showBrowseAlert("The only supported excel file is .xls extension. Please choose correct file.\n\n\"" + path + "\"");
+                        showBrowseAlert("The only supported image files are:" + pathUtil.arrayToList() + "<br /><i>Please choose the correct file.</i>");
                 } catch (Exception e) {
-                    showBrowseAlert("Take screenshot and share:\n\n" + e.toString());
+                    showBrowseAlert("Take screenshot and share to Bilal Ahmad:\n\n" + e.toString());
                 }
 
             }
@@ -165,7 +166,7 @@ public class HomeActivity extends AppCompatActivity {
         AlertDialog.Builder builder;
         builder = new AlertDialog.Builder(this);
         builder
-                .setMessage(msg)
+                .setMessage(Html.fromHtml(msg))
                 .setPositiveButton("Browse", (dialog, which) -> {
                     if (isPermissionGivenFor(PERMISSION_READING_STORAGE))
                         showFileChooser();
